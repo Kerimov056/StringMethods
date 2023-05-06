@@ -56,7 +56,7 @@ function protect_email(email) {
 // burda @ hissesine gore 2 splitnen 2 yere boluruk.cunki sonda usdune gelceyik sag terefin
 // sag terefide substr le 0'dan 5'e kimi hissesini goturub usdune ... gelirik
 
-console.log("Task 5");
+console.log("Task 3");
 protect_email("robin_singh@example.com");
 console.log("------------------------------");
 
@@ -101,15 +101,15 @@ console.log("------------------------------");
 
 
 //         hell  1
-let sentence = "Bu gun gun hava cox yagislidir";
+let sentence = "Bu Gun, gun, gun hava cox yagislidir";
 let word = "gun";
 let say = 0;
 let soz = "";
 for (let i = 0; i < sentence.length; i++) {
     if (sentence[i] != " ") {
-        soz += sentence[i];
-        if (word == soz) {
-            say++;
+        soz += sentence[i];                            
+        if (word.toLowerCase() == soz.toLowerCase()) {                    //Bu asagdaki cod'dan daha duzgun cod'dur.
+            say++;                                                       //Burda vergulde nezeere alinib
         }
     }
     else {
@@ -126,12 +126,12 @@ console.log("search_number :" + say);
 
 
 //          hell 2
-let sentenc = "Bu gun hava cox cox cox yagislidir";
+let sentenc = "Bu gun hava Cox, cox yagislidir";
 let word1 = "cox";
 let say1 = 0;
-let array = sentenc.split(' ');
+let array = sentenc.split(/\s|,/);  //regex bruda space ve , gore split edir
 for (let i = 0; i < array.length; i++) {
-    if (array[i] == word1) {
+    if (array[i].toUpperCase() == word1.toUpperCase()) {
         say1++;
     }
 }
