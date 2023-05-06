@@ -33,6 +33,35 @@ console.log("------------------------------");
 // -----------------------------------------------------------------------------------------
 
 
+//               Task 3
+// Write a JavaScript function that hides email addresses to prevent unauthorized access. 
+
+// Test Data :
+// console.log(protect_email("robin_singh@example.com"));
+// "robin...@example.com"
+
+function protect_email(email) {
+    let split = email.split('@');
+    let user = split[0];
+    let gmail = split[1];
+
+    for (let i = 0; i <= user.length; i++) {
+        user = user.substr(0, 5) + "...";
+    }
+
+    email = user + "@" + gmail;
+    console.log(email);
+}
+
+// burda @ hissesine gore 2 splitnen 2 yere boluruk.cunki sonda usdune gelceyik sag terefin
+// sag terefide substr le 0'dan 5'e kimi hissesini goturub usdune ... gelirik
+
+console.log("Task 5");
+protect_email("robin_singh@example.com");
+console.log("------------------------------");
+
+
+
 //               Task 4
 // 4) Write a JavaScript function to repeat a string for a specified time.
 
@@ -43,14 +72,14 @@ console.log("------------------------------");
 // "aaaa"
 // "Error in string or count."
 
-function repeat_string(text, repeat_number){
-    if(typeof text !== "string" || typeof repeat_number !=="number" || repeat_number < 0){
+function repeat_string(text, repeat_number) {
+    if (typeof text !== "string" || typeof repeat_number !== "number" || repeat_number < 0) {
         return "Error"
     }
     return text.repeat(repeat_number)
 }
 console.log("Task 4");
-console.log("Repeat :"+repeat_string("a",4));
+console.log("Repeat :" + repeat_string("a", 4));
 console.log("------------------------------");
 
 // yeni bir string yaradir. Orjinala toxunmur.
@@ -69,7 +98,7 @@ console.log("------------------------------");
 // Output :
 // "'fox' was found 1 times."
 // "'aa' was found 2 times."
-  
+
 
 //         hell  1
 let sentence = "Bu gun gun hava cox yagislidir";
@@ -77,18 +106,18 @@ let word = "gun";
 let say = 0;
 let soz = "";
 for (let i = 0; i < sentence.length; i++) {
-    if (sentence[i]!=" ") {
+    if (sentence[i] != " ") {
         soz += sentence[i];
         if (word == soz) {
             say++;
         }
     }
-    else{
+    else {
         soz = "";
     }
 }
 console.log("Task 5");
-console.log("search_number :"+ say);
+console.log("search_number :" + say);
 
 // burda cumleni bir loop dongusenue salib dondererek yeni empty olan bir stringin usdune charlari gelirem yalniz
 // bunda evvel gelmezden evvel bir if sertide eger i'ci  bosluga beraber deyilse usdune empty olan text'in usdune gelsin
@@ -102,11 +131,11 @@ let word1 = "cox";
 let say1 = 0;
 let array = sentenc.split(' ');
 for (let i = 0; i < array.length; i++) {
-    if(array[i]==word1){
+    if (array[i] == word1) {
         say1++;
     }
 }
-console.log("search_number :"+say1);
+console.log("search_number :" + say1);
 console.log("------------------------------");
 
 // burda evvelce cumleni split methodu ile bosluga gore kesib bir arraye daxil etdim.
